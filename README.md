@@ -2,7 +2,7 @@
 
 ## Overview
 
-Containerized installation of Java Model Railroad Interface (https://www.jmri.org/). The light-weight desktop environment accessible from the browser with NoVNC is based on [piopi/docker-desktop] (https://github.com/piopi/docker-desktop).
+Containerized installation of Java Model Railroad Interface (https://www.jmri.org/). The light-weight desktop environment accessible from the browser with NoVNC is based on [piopi/docker-desktop](https://github.com/piopi/docker-desktop).
 
 ## Usage
 
@@ -120,8 +120,8 @@ DockerHub link of the images:
 - [TigerVNC](https://github.com/TigerVNC/tigervnc) - A VNC server that scrapes the above X11 server
 - [noVNC](https://github.com/novnc/noVNC) - A HTML5 canvas vnc viewer
 - [xfce4](https://www.xfce.org/) - A small desktop environment
-- [openjdk-17-jre] (https://packages.debian.org/sid/openjdk-17-jre) - Full Java runtime environment
-- [JMRI] (https://www.jmri.org/) - Java Model Railroad Interface
+- [openjdk-17-jre](https://packages.debian.org/sid/openjdk-17-jre) - Full Java runtime environment
+- [JMRI](https://www.jmri.org/) - Java Model Railroad Interface
 
 ## Maintainers
 
