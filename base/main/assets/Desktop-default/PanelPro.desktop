@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=PanelPro
+Comment=JMRI Panel Pro
+Icon=/opt/JMRI/resources/PanelPro.gif
+Exec=/opt/JMRI/PanelPro
+Terminal=false;
+        
