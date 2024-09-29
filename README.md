@@ -9,7 +9,7 @@ Containerized installation of Java Model Railroad Interface (https://www.jmri.or
 The image comes with noVNC to allow user to view the desktop environment running JMRI with their browsers. You will be able to access the noVNC windows at [http://localhost:6901](http://localhost:6901) or use your VNC viewer with `localhost:5901`.
 JMRI WebServer and WiThrottle are enabled in the default configurations. These are accessible respectively at [http://localhost:12080](http://localhost:12080) and `hostname:12090`.
 
-![](/screenshots/Capture.PNG)
+![](/screenshots/Capture.png)
 *noVNC view of the Container running JMRI*
 
 ## Setup
