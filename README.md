@@ -156,9 +156,9 @@ BUSID  VID:PID    DEVICE                                                        
 Persisted:
 GUID                                  DEVICE
 ```
-Note down he BUSID `1-3` in this case as this will be needed later.
+  Note down he BUSID `1-3` in this case as this will be needed later.
 
-5) To share the device run `C:\WINDOWS\system32>usbipd bind --busid=<busis>`, where `<busis>` is your BUSID.
+5) To share the device run `C:\WINDOWS\system32>usbipd bind --busid=<busid>`, where `<busid>` is your BUSID.
 6) Run the `usbipd list` command again and the device should now show as shared:
 ```
 C:\WINDOWS\system32>usbipd list
@@ -173,7 +173,7 @@ GUID                                  DEVICE
 ```
 
 7) To attach the USB device to WSL2 run `usbipd attach --wsl --busid <busid>`
-8) Open the WSL distibution termial and run 'sudo apt-get update`
+8) Open the WSL distibution termial and run `sudo apt-get update`
 9) Install usbutils by running `sudo apt-get install usbutils`
 10) Now run `lsusb` to confirm that the shared USB device is accessibe from within WSL. You should see your device listed:
 ```
