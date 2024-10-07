@@ -182,7 +182,7 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 002: ID 1a86:7523 QinHeng Electronics CH340 serial converter
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
-11) Check in /dev if ttyUSBx USB/Serial is preset. If not load the correct kernel module (e.g. `sudo modprobe ch341` for the example above) and then confirm you can now see /dev/ttyUSBx.
+11) Check in `/dev` if the `ttyUSBx` USB/Serial device is preset. If not load the correct kernel module (e.g. `sudo modprobe ch341` for the example above) and then confirm you can now see the `/dev/ttyUSBx` device .
 12) You are now ready to start the container with the `--device` option:
 ```Shell
 docker run -d --device /dev/ttyUSBx:/dev/ttyUSB0 -p 6901:6901 -p 5901:5901 -p 12080:12080 -p 12090:12090 -v jmri-home:/home/jmri --name jmri jsa1987/jmri-docker:stable
