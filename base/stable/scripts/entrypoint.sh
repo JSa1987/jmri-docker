@@ -11,6 +11,9 @@ cp -n /var/opt/Desktop-default/PanelPro.desktop /home/jmri/.config/autostart/Pan
 chown -R jmri:jmri /home/jmri
 chmod -R 777 /home/jmri
 
+# Give RW access to USB devices passed through
+sudo chmod a+rw /dev/ttyUSB* 
+
 # set -e: exit asap if a command exits with a non-zero status
 
 set -e

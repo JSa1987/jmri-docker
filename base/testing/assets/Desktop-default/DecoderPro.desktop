@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=DecoderPro
+Comment=JMRI Decoder Pro
+Icon=/opt/JMRI/resources/decoderpro.gif
+Exec=/opt/JMRI/DecoderPro
+Terminal=false;

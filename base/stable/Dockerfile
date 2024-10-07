@@ -18,7 +18,7 @@ RUN apt-get install --no-install-recommends -y \
     xvfb xauth dbus-x11 xfce4 xfce4-terminal \
     wget sudo curl gpg git bzip2 vim procps python3 x11-xserver-utils \
     libnss3 libnspr4 libasound2 libgbm1 ca-certificates fonts-liberation xdg-utils \
-    tigervnc-standalone-server tigervnc-common firefox-esr openjdk-17-jre nano
+    tigervnc-standalone-server tigervnc-common firefox-esr openjdk-17-jre nano usbutils
 RUN curl http://ftp.us.debian.org/debian/pool/main/liba/libappindicator/libappindicator3-1_0.4.92-7_amd64.deb --output /opt/libappindicator3-1_0.4.92-7_amd64.deb && \
     curl http://ftp.us.debian.org/debian/pool/main/libi/libindicator/libindicator3-7_0.5.0-4_amd64.deb --output /opt/libindicator3-7_0.5.0-4_amd64.deb && \
     apt-get install -y /opt/libappindicator3-1_0.4.92-7_amd64.deb /opt/libindicator3-7_0.5.0-4_amd64.deb; \
@@ -57,6 +57,7 @@ RUN chown -R jmri:jmri /opt/JMRI
 
 RUN adduser jmri sudo;\
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN adduser jmri dialout
 
 USER jmri
 # versions of local tools
@@ -66,7 +67,6 @@ RUN echo  "debian version:  $(cat /etc/debian_version) \n" \
 COPY scripts/entrypoint.sh /src
 
 #Expose port 5901 to view display using VNC Viewer, 6901 for noVNC, 12080 for WebServer, 12090 for WiThrottle, 1234 for LoconetOverTCP, 2056 for JSON server, 4303 doe SRCP server and 2048 for simple server
-#EXPOSE 5901 6901 12080 12090 1234 2056 4303 2048
-EXPOSE $VNC_PORT $NO_VNC_PORT $WEBSERVER_PORT
+EXPOSE $VNC_PORT $NO_VNC_PORT $WEBSERVER_PORT 12080 12090 1234 2056 4303 2048
     
 ENTRYPOINT ["/src/entrypoint.sh"]
