@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auxiliary-configuration xmlns="http://www.netbeans.org/ns/auxiliary-configuration/1">
+    <connections xmlns="http://jmri.org/xml/schema/auxiliary-configuration/connections-2-9-6.xsd">
+        <connection xmlns="" class="jmri.jmrix.dccpp.simulator.configurexml.ConnectionConfigXml" disabled="no" reconnectMaxAttempts="100" reconnectMaxInterval="120" systemPrefix="D" userName="DCC++">
+            <options/>
+        </connection>
+    </connections>
+    <startup xmlns="http://jmri.org/xml/schema/auxiliary-configuration/startup-4-3-5.xsd">
+        <perform xmlns="" class="jmri.util.startup.configurexml.PerformActionModelXml" enabled="yes" name="jmri.web.server.WebServerAction" type="Action">
+            <property name="systemPrefix" value=""/>
+        </perform>
+        <perform xmlns="" class="jmri.util.startup.configurexml.PerformActionModelXml" enabled="yes" name="jmri.jmrit.withrottle.WiThrottleCreationAction" type="Action">
+            <property name="systemPrefix" value=""/>
+        </perform>
+        <perform xmlns="" class="jmri.util.startup.configurexml.PerformActionModelXml" enabled="yes" name="apps.SystemConsoleAction" type="Action">
+            <property name="systemPrefix" value=""/>
+        </perform>
+        <perform xmlns="" class="apps.configurexml.CreateButtonModelXml" enabled="yes" name="apps.RestartAction" type="Button">
+            <property name="systemPrefix" value=""/>
+        </perform>
+    </startup>
+</auxiliary-configuration>

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=JMRI Config
+Icon=user-home
+Exec=pcmanfm-qt /home/jmri/.jmri
